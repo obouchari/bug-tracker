@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 from flask_assets import Environment, Bundle
 
 app = Flask(__name__)
@@ -11,7 +11,7 @@ css.build()
 
 @app.get('/')
 def home():
-    return render_template('index.html')
+    return 'Welcome to Flask!'
 
 
 if __name__ == "__main__":
